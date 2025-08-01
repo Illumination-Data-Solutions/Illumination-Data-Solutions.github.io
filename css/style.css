@@ -950,10 +950,73 @@ a:focus {
 
 .team .team-img {
     position: relative;
+    overflow: hidden;
 }
 
 .team .team-img img {
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.team .team-img:hover img {
+    transform: scale(1.05);
+}
+
+/* Tooltip overlay for hover effect */
+.team .team-img .team-tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 15, 39, 0.95);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.team .team-img:hover .team-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.team .team-tooltip h3 {
+    color: #339bfd;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+
+.team .team-tooltip p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .team .team-tooltip {
+        padding: 15px;
+    }
+
+    .team .team-tooltip h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .team .team-tooltip p {
+        font-size: 12px;
+    }
 }
 
 .team .team-text {
