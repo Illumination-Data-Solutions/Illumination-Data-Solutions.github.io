@@ -1910,6 +1910,9 @@ a:focus {
 
 .portfolio .load-more {
     text-align: center;
+    clear: both;
+    position: relative;
+    z-index: 1;
 }
 
 .portfolio .load-more .btn {
