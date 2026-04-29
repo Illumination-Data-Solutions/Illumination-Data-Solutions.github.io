@@ -92,7 +92,9 @@ a:focus {
 .top-bar .logo {
     padding: 15px 0;
     text-align: left;
-    overflow: hidden;
+    overflow: visible;
+    display: flex;
+    align-items: center;
 }
 
 .top-bar .logo h1 {
@@ -105,7 +107,8 @@ a:focus {
 
 .top-bar .logo img {
     max-width: 100%;
-    max-height: 60px;
+    max-height: 70px;
+    object-fit: contain;
 }
 
 .top-bar .top-bar-item {
